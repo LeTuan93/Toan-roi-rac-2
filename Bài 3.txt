@@ -1,0 +1,13 @@
+Bán bậc vào của đỉnh 1 là 0 : deg-(1)=0    , bán bậc ra của đỉnh 1 là 3 : deg+(1)=3
+
+Bán bậc vào của đỉnh 2 là 1 : deg-(2)=1    , bán bậc ra của đỉnh 2 là 1 : deg+(2)=1
+
+Bán bậc vào của đỉnh 3 là 2 : deg-(3)=2    , bán bậc ra của đỉnh 3 là 1 : deg+(3)=1
+
+Bán bậc vào của đỉnh 4 là 1 : deg-(4)=1    , bán bậc ra của đỉnh 4 là 3 : deg+(4)=3
+
+Bán bậc vào của đỉnh 5 là 2 : deg-(5)=2    , bán bậc ra của đỉnh 5 là 1 : deg+(5)=1
+
+Bán bậc vào của đỉnh 6 là 1 : deg-(6)=1    , bán bậc ra của đỉnh 6 là 1 : deg+(6)=1
+
+Bán bậc vào của đỉnh 7 là 3 : deg-(7)=3    , bán bậc ra của đỉnh 7 là 0 : deg+(7)=0

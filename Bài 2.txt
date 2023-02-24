@@ -1,0 +1,13 @@
+Bậc của đỉnh 1 là 3 : deg(1)=3
+
+Bậc của đỉnh 2 là 3 : deg(2)=3
+
+Bậc của đỉnh 3 là 2 : deg(3)=2
+
+Bậc của đỉnh 4 là 4 : deg(4)=4
+
+Bậc của đỉnh 5 là 2 : deg(5)=2
+
+Bậc của đỉnh 6 là 3 : deg(6)=3
+
+Bậc của đỉnh 7 là 3 : deg(7)=3
