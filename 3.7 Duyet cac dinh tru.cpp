@@ -1,5 +1,5 @@
 // Lưu ý code này có thể AC tuy nhiên code này chỉ đúng khi ma trận nhập vào là đồ thị có số thành phần liên thông là 1
-// để đúng trong mọi trường hợp vui lòng tham khảo file code "Dinh tru canh cau.cpp" đã được cập nhật trong Repos Toan-roi-rac-2
+// để đúng trong mọi trường hợp vui lòng tham khảo file code "Dinh tru canh cau.cpp" đã được cập nhật trong Repos Toan-roi-rac-2 
 #include<iostream>
 #include<vector>
 #include<cstring>
