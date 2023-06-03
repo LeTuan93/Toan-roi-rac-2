@@ -11,9 +11,11 @@ void dfs(int u){
 }
 // dfs theo ngan xep
 void dfs(int u){
+    //Bước 1 khởi tạo	
     stack<int> st;
     st.push(u);
     unused[u]=1;
+    //Bước 2 lặp
     while (st.size()!=0){
         int s=st.top();
 	st.pop();
@@ -29,18 +31,25 @@ void dfs(int u){
 }
 //Câu 1.2
 void BFS(int u) {
+    //Bước 1 khởi tạo
     queue<int> q;
     q.push(u);
     unused[u] = 1;
+    //Bước 2 lặp	
     while (!q.empty()) {
         int s = q.front();
         q.pop();
+	if (kq.size()!=n) kq.push_back(s); // Lưu kết quả
         for (int x = 1; x <= n; x++) {
             if (a[s][x] == 1 && unused[x] == 0) {
                 unused[x] = 1;
                 q.push(x);
             }
         }
+    }
+    //Bước 3 Return giá trị
+    for (auto x : kq){
+    	cout<<x<<" ";
     }
 }
 //Câu 1.3
