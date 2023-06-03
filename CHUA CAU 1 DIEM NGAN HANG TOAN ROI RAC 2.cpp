@@ -19,6 +19,11 @@ void dfs(int u){
     while (st.size()!=0){
         int s=st.top();
 	st.pop();
+	//lưu kết quả
+	if (kq.size()!=n && mp[s]==0){
+            kq.push_back(s);
+            mp[s]++;
+        }    
     	for (int x = 1; x <= n; x++){
         	if (a[i][x] == 1 && unused[x] == 0) {
                 unused[x]=1;
@@ -27,6 +32,10 @@ void dfs(int u){
                 break;
             }
         }
+    }
+    //Bước 3 Return giá trị
+    for (auto x : kq){
+    	cout<<x<<" ";
     }
 }
 //Câu 1.2
