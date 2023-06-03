@@ -1,5 +1,5 @@
 
-//Câu 1.1
+//CÃ¢u 1.1
 // dfs theo quay lui
 void dfs(int u){
     unused[u] = 1;
@@ -11,6 +11,7 @@ void dfs(int u){
 }
 // dfs theo ngan xep
 void dfs(int u){
+    stack<int> st;
     st.push(u);
     unused[u]=1;
     while (st.size()!=0){
@@ -25,7 +26,7 @@ void dfs(int u){
         }
     }
 }
-//Câu 1.2
+//CÃ¢u 1.2
 void BFS(int u) {
     queue<int> q;
     q.push(u);
@@ -41,7 +42,7 @@ void BFS(int u) {
         }
     }
 }
-//Câu 1.3
+//CÃ¢u 1.3
 int TPLT_DFS(){
     int cnt=0;
     for (int i=1;i<=n;i++){
@@ -52,7 +53,7 @@ int TPLT_DFS(){
     }
     return cnt;
 }
-//Câu 1.4
+//CÃ¢u 1.4
 int TPLT_BFS(){
     int cnt=0;
     for (int i=1;i<=n;i++){
@@ -63,7 +64,7 @@ int TPLT_BFS(){
     }
     return cnt;
 }
-//Câu 1.5
+//CÃ¢u 1.5
 void DFS(int u){
     unused[u]=1;
 	for (int x = 1; x <= n; x++) {
@@ -89,7 +90,7 @@ void T_DFS(int u){
         }
     }
 }
-//Câu 1.6
+//CÃ¢u 1.6
 void T_BFS(int u){
     for (int i=1;i<=n;i++) unused[i]=0;
     queue<int> q;
@@ -116,7 +117,7 @@ void T_BFS(int u){
         }
     }
 }
-//Câu 1.7
+//CÃ¢u 1.7
 void EULER(int u) {
     vector<int> ec;
     stack<int> st;
@@ -143,7 +144,7 @@ void EULER(int u) {
         cout << x << " ";
     }
 }
-//Câu 1.8
+//CÃ¢u 1.8
 void DIJKSTRA(int s) {
     vector<int> d(n + 1, INF);
     vector<int> truoc(n + 1, s);
@@ -166,7 +167,7 @@ void DIJKSTRA(int s) {
             }
         }
         if (minDist == INF) {
-            break;  // Không còn d?nh trong T
+            break;  // KhÃ´ng cÃ²n d?nh trong T
         }
         T[u] = false;
         for (int v = 1; v <= n; v++) {
@@ -177,7 +178,7 @@ void DIJKSTRA(int s) {
         }
     }
 }
-//Câu 1.9
+//CÃ¢u 1.9
 void FLOYD(){
 	for (int i=1;i<=n;i++){
 		for (int j=1;j<=n;j++){
@@ -197,7 +198,7 @@ void FLOYD(){
 		}
 	}
 }
-//Câu 1.10
+//CÃ¢u 1.10
 struct canh{
 	int x, y, w;
 };
@@ -206,7 +207,7 @@ void PRIM(int u){
 	int distance = 0; // chieu dai cay khung
 	used[u] = true; // dua dinh u vao tap V(MST)
 	while(MST.size() < n - 1){
-		//e = (x, y) : C?nh ng?n nh?t có x thu?c V và y thu?c V(MST)
+		//e = (x, y) : C?nh ng?n nh?t cÃ³ x thu?c V vÃ  y thu?c V(MST)
 		int min_w = INT_MAX;
 		int X, Y; // luu 2 dinh cua canh e
 		for(int i = 1; i <= n; i++){
@@ -230,7 +231,7 @@ void PRIM(int u){
 		cout << e.x <<  " " << e.y << " " << e.w << endl;
 	}
 }
-//Câu 1.11
+//CÃ¢u 1.11
 void HALMITON(int k){
 	for (int i = 1;i <= n ; i++){
 		if (a[i][x[k-1]]==1){
