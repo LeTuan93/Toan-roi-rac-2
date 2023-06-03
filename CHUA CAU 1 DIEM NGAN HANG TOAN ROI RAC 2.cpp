@@ -16,6 +16,7 @@ void dfs(int u){
     unused[u]=1;
     while (st.size()!=0){
         int s=st.top();
+	st.pop();
     	for (int x = 1; x <= n; x++){
         	if (a[i][x] == 1 && unused[x] == 0) {
                 unused[x]=1;
@@ -67,7 +68,7 @@ int TPLT_BFS(){
 //Câu 1.5
 void DFS(int u){
     unused[u]=1;
-	for (int x = 1; x <= n; x++) {
+    for (int x = 1; x <= n; x++) {
          if (a[u][x] == 1 && unused[x] == 0) {
             int c=u;
             int c1=x;
@@ -80,7 +81,7 @@ void DFS(int u){
 void T_DFS(int u){
     for (int i=1;i<=n;i++) unused[i]=0;
     vector<pair<int,int>> T;
-	DFS(u);
+    DFS(u);
     if (T.size()<n-1){
         cout<<"Do thi khong lien thong";
     }
@@ -100,7 +101,7 @@ void T_BFS(int u){
     while (q.size()!=0){
         int s = q.front();
         q.pop();
-		for (int x = 1; x <= n; x++) {
+	for (int x = 1; x <= n; x++) {
             if (a[s][x] == 1 && unused[x] == 0) {
                 unused[x]=1;
                 T.push_back({s,x});
@@ -235,17 +236,17 @@ void PRIM(int u){
 void HALMITON(int k){
 	for (int i = 1;i <= n ; i++){
 		if (a[i][x[k-1]]==1){
-	        if (k == n+1 && y == s){
-	            for (int i=1;i<=n;i++) cout<<x[i]<<" ";
-	            cout<<s;
-	            cout<<endl;
-	        }
-	        else if (unused[y]==0){
-	            unused[y]=1;
-	            x[k]=y;
-	            hmt(k+1);
-	            unused[y]=0;
-	        }
+		if (k == n+1 && y == s){
+		    for (int i=1;i<=n;i++) cout<<x[i]<<" ";
+		    cout<<s;
+		    cout<<endl;
+		}
+		else if (unused[y]==0){
+		    unused[y]=1;
+		    x[k]=y;
+		    hmt(k+1);
+		    unused[y]=0;
+		}
 	    }
     }
 }
