@@ -235,7 +235,7 @@ void PRIM(int u){
 				//duyet danh sach ke cua dinh i
 				for (int j = 1;j <= n; j++){
 					if(!used[j] && d[i][j] < min_w){
-						min_w = trongso;
+						min_w = d[i][j];
 						X = j; Y = i;
 					}
 				}
