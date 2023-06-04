@@ -268,13 +268,26 @@ void HALMITON(int k){
 	    }
     }
 }
-void hmtCircle(int v){
-    for (int i=1;i<=n;i++) unused[i]=0;
-    x[1]=v;
-    unused[v]=1;
-    hmt(2);
-}
 
+//Bổ sung
+void Bellman_ford(int s){
+	memset(d,0,sizeof(d));
+	for (int i=1;i<=n;i++){
+		d[i]=a[s][i];
+		pre[i]=s;
+	}	
+	for (int k=1;k<=n-2;k++){
+		for (int v=1 ;v<=n;v++){
+			if (v == s) continue;
+			for (int u=1;u<=n;u++){
+				if (d[v]> d[u] + a[u][v]){
+					d[v]=d[u]+ a[u][v];
+					pre[v]=u;
+				}
+			}
+		}
+	}
+}
 
 
 
